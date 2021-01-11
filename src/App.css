@@ -1,0 +1,15 @@
+.App {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ant-layout-content {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
