@@ -12,7 +12,7 @@ function App() {
   })
 
   let content = currentDisplay.type === 'drop' ?
-    <DropArea setCurrentDisplay={setCurrentDisplay}></DropArea> : <ActorDetails actorName={currentDisplay.actorName}></ActorDetails>
+    <DropArea setCurrentDisplay={setCurrentDisplay}></DropArea> : <ActorDetails actorName={currentDisplay.actorName} setCurrentDisplay={setCurrentDisplay}></ActorDetails>
 
   return (
     <Layout className="App">

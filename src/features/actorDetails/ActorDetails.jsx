@@ -1,9 +1,9 @@
-import { Col, Row } from "antd";
+import { Button, Col, Row } from "antd";
 import * as React from "react";
 import { MoviesList } from "../moviesList/MoviesList";
 import "./ActorDetails.css";
 import { ActorInfo } from "./ActorInfo";
-export const ActorDetails = ({ actorName }) => {
+export const ActorDetails = ({ actorName, setCurrentDisplay }) => {
   const [actorInfo, setActorInfo] = React.useState({});
 
   React.useEffect(() => {
@@ -28,6 +28,14 @@ export const ActorDetails = ({ actorName }) => {
 
   return (
     <div className="ActorDetails">
+      <Row>
+        <Button
+          type="primary"
+          onClick={() => setCurrentDisplay({ type: "drop" })}
+        >
+          Go back
+        </Button>
+      </Row>
       <Row>
         <Col span={8}>
           <ActorInfo actor={actorInfo}></ActorInfo>
