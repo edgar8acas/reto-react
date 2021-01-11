@@ -4,7 +4,7 @@ import { InboxOutlined } from "@ant-design/icons";
 import "./DropArea.css";
 
 const { Dragger } = Upload;
-export default function DropArea() {
+export const DropArea = ({ setCurrentDisplay }) => {
   const [fileList, setFileList] = useState([]);
   const draggerProps = {
     fileList,
@@ -44,6 +44,8 @@ export default function DropArea() {
           message.success(
             `We recognized ${response.actorName} in ${info.file.name}.`
           );
+          setCurrentDisplay({ type: "details", actorName: response.actorName });
+          return;
         } else {
           message.error(
             `We couldn't recognize an actor in the photo ${info.file.name}, try again.`
@@ -84,4 +86,4 @@ export default function DropArea() {
       </Dragger>
     </div>
   );
-}
+};
