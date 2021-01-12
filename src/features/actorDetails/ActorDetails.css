@@ -1,2 +1,12 @@
 .ActorDetails {
+  max-width: 1000px;
+  background-color: white;
+}
+
+.ActorDetails-header {
+  padding: 1rem;
+}
+
+.ActorDetails-info-wrapper {
+  flex-basis: 15em;
 }

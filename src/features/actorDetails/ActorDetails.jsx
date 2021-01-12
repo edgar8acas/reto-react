@@ -28,7 +28,7 @@ export const ActorDetails = ({ actorName, setCurrentDisplay }) => {
 
   return (
     <div className="ActorDetails">
-      <Row>
+      <Row className="ActorDetails-header">
         <Button
           type="primary"
           onClick={() => setCurrentDisplay({ type: "drop" })}
@@ -37,7 +37,7 @@ export const ActorDetails = ({ actorName, setCurrentDisplay }) => {
         </Button>
       </Row>
       <Row>
-        <Col span={8}>
+        <Col span={8} className="ActorDetails-info-wrapper">
           <ActorInfo actor={actorInfo}></ActorInfo>
         </Col>
         <Col span={16}>

@@ -1,2 +1,11 @@
 .MoviesList {
+  padding: 1rem;
+}
+
+.MovieListItem-image-wrapper {
+  flex-basis: 100px;
+}
+
+.MovieListItem-image-wrapper img {
+  width: 100%;
 }
