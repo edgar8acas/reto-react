@@ -41,7 +41,7 @@ export const ActorDetails = ({ actorName, setCurrentDisplay }) => {
           <ActorInfo actor={actorInfo}></ActorInfo>
         </Col>
         <Col span={16}>
-          <MoviesList></MoviesList>
+          <MoviesList movies={actorInfo.known_for}></MoviesList>
         </Col>
       </Row>
     </div>
