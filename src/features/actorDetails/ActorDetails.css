@@ -5,8 +5,12 @@
 
 .ActorDetails-header {
   padding: 1rem;
+  border-bottom: 1px solid var(--colorGrayBorder);
 }
 
 .ActorDetails-info-wrapper {
   flex-basis: 15em;
+  border-right: 1px solid var(--colorGrayBorder);
+  margin-left: 16px;
+  padding-top: 16px;
 }

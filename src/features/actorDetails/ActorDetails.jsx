@@ -36,7 +36,7 @@ export const ActorDetails = ({ actorName, setCurrentDisplay }) => {
           Go back
         </Button>
       </Row>
-      <Row>
+      <Row gutter={32}>
         <Col span={8} className="ActorDetails-info-wrapper">
           <ActorInfo actor={actorInfo}></ActorInfo>
         </Col>
