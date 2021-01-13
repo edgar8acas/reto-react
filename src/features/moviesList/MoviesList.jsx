@@ -11,6 +11,13 @@ const MovieListItem = ({ item }) => {
     overview,
     release_date,
   } = item;
+
+  const releaseDate = new Date(release_date);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const formattedReleaseDate = new Intl.DateTimeFormat("en-US", options).format(
+    releaseDate
+  );
+
   return (
     <div className="MovieListItem">
       <Row>
@@ -38,7 +45,7 @@ const MovieListItem = ({ item }) => {
         <Col span={19} className="MovieListItem-overview">
           <p className="MovieListItem-overview">{overview}</p>
           <p className="MovieListItem-release-date">
-            Release date: {release_date}
+            Release date: {formattedReleaseDate}
           </p>
         </Col>
       </Row>
