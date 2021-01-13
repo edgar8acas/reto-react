@@ -15,7 +15,7 @@ export const ActorInfo = ({ actor }) => {
       <Title level={3} className="ActorInfo-name">
         {name}
       </Title>
-      <div className="ActorInfo-gender">{gender === 1 ? "Female" : "Male"}</div>
+      <div className="ActorInfo-gender">{gender === 1 ? "Woman" : "Man"}</div>
       <p className="ActorInfo-popularity">Popularity: {popularity}</p>
     </div>
   );
