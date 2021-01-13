@@ -1,0 +1,24 @@
+.MoviesList {
+}
+
+.MovieListItem {
+  margin-bottom: 1rem;
+}
+
+.MovieListItem-release-date {
+  margin: 0;
+  font-weight: 600;
+}
+
+.MovieListItem-overview {
+  font-size: 16px;
+}
+
+.MovieListItem-vote {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.MovieListItem-vote-rate {
+  margin-right: 1rem;
+}

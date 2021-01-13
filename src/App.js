@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { DropArea } from "./features/dropArea/DropArea";
+import "./App.css"
+import { Layout } from "antd";
+import { useState } from "react";
+import { ActorDetails } from "./features/actorDetails/ActorDetails";
+const { Content } = Layout;
 
 function App() {
+
+  const [currentDisplay, setCurrentDisplay] = useState({
+    type: 'drop'
+  })
+
+  let content = currentDisplay.type === 'drop' ?
+    <DropArea setCurrentDisplay={setCurrentDisplay}></DropArea> : <ActorDetails actorName={currentDisplay.actorName} setCurrentDisplay={setCurrentDisplay}></ActorDetails>
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className="App">
+      <Content>
+        {content}
+      </Content>
+    </Layout>
   );
 }
 

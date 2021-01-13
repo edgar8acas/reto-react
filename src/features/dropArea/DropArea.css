@@ -1,0 +1,15 @@
+.DropArea {
+  background-color: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid var(--colorGray15);
+}
+
+p.ant-upload-hint {
+  padding: 0px 2rem;
+}
+
+.ant-upload-drag-container {
+  text-align: center;
+}
