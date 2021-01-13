@@ -1,5 +1,7 @@
 import * as React from "react";
 import "./ActorInfo.css";
+import { Typography } from "antd";
+const { Title } = Typography;
 export const ActorInfo = ({ actor }) => {
   const { name, gender, popularity, profile_path } = actor;
 
@@ -10,9 +12,11 @@ export const ActorInfo = ({ actor }) => {
         width="100%"
         alt={name}
       ></img>
-      <h1>{name}</h1>
-      <span>{gender === 1 ? "Female" : "Male"}</span>
-      <span>{popularity}</span>
+      <Title level={3} className="ActorInfo-name">
+        {name}
+      </Title>
+      <div className="ActorInfo-gender">{gender === 1 ? "Female" : "Male"}</div>
+      <p className="ActorInfo-popularity">Popularity: {popularity}</p>
     </div>
   );
 };
